@@ -35,17 +35,12 @@ public class Abecedario implements Iterable<Character> {
         }
 
         public Character nextVocal() throws NoSuchElementException {
-            int prevPos=pos;
             if (!hasNextVocal()) {
                 throw new NoSuchElementException();
             } else {
-                for (int i=0;i<vocPos.length;i++){
-                    if (pos<vocPos[i]+1){
-                        pos=vocPos[i];
-                    }
-                }
             }
-            return letras[prevPos];
+            return null;
         }
+
     }
 }
