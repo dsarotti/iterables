@@ -2,22 +2,19 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import javax.management.RuntimeErrorException;
-
 public class Abecedario implements Iterable<Character> {
     private final Character[] letras = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
             'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
     private final int[] vocPos = { 0, 4, 8, 14, 20 };
     private ArrayList<String> hola;
+    
     @Override
-    public Iterator iterator() {
-        // TODO Auto-generated method stub
+    public AbcIterator iterator() {
         return new AbcIterator();
     }
 
-    class AbcIterator implements Iterator {
+    class AbcIterator implements Iterator<Character> {
         int pos=0;
-
 
         @Override
         public boolean hasNext() throws NoSuchElementException {
@@ -34,22 +31,21 @@ public class Abecedario implements Iterable<Character> {
         }
 
         public boolean hasNextVocal() {
-            return pos < vocPos[vocPos.length - 1];
+            return pos < vocPos[4];
         }
 
         public Character nextVocal() throws NoSuchElementException {
+            int prevPos=pos;
             if (!hasNextVocal()) {
                 throw new NoSuchElementException();
             } else {
                 for (int i=0;i<vocPos.length;i++){
-                    if (pos<=vocPos[i]){
+                    if (pos<vocPos[i]+1){
                         pos=vocPos[i];
-                    }else{
-                        break;
                     }
                 }
             }
-            return letras[pos];
+            return letras[prevPos];
         }
     }
 }

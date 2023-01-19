@@ -15,7 +15,7 @@ public class Main {
         // ...
 
         Abecedario abcb = new Abecedario();
-        Abecedario.AbcIterator iter = (Abecedario.AbcIterator) abcb.iterator();
+        Abecedario.AbcIterator iter = abcb.iterator();
         while (iter.hasNextVocal()) {
             System.out.println("vocal: " + iter.nextVocal());
         }
