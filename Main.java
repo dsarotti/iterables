@@ -32,6 +32,18 @@ public class Main {
         System.out.println("------------------------------------");
         System.out.println("Fin de la 2º parte.");
 
+        System.out.println("====================================");
+        System.out.println("2.1º) nextVocal() > next() > nextVocal() ");
+        System.out.println("------------------------------------");
+
+        Abecedario abcc = new Abecedario();
+        Abecedario.AbcIterator iter2 = abcc.iterator();
+        System.out.println("vocal 'A': " + iter2.nextVocal());
+        System.out.println("consonante 'B': " +iter2.next());
+        System.out.println("vocal 'E': " + iter2.nextVocal());
+        System.out.println("------------------------------------");
+        System.out.println("Fin de la 2.1º parte.");
+
         // La salida por consola debería ser:
         // vocal: a
         // vocal: e
