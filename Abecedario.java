@@ -2,7 +2,8 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class Abecedario implements Iterable<Character> {
-    protected final Character[] letras = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+    protected final Character[] letras = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
+            'P',
             'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
     protected final int[] vocPos = { 0, 4, 8, 14, 20 };
 
@@ -35,7 +36,7 @@ public class Abecedario implements Iterable<Character> {
         public Character nextVocal() throws NoSuchElementException {
             if (!hasNextVocal()) {
                 throw new NoSuchElementException();
-            } else if (pos!=0){
+            } else if (pos != 0) {
                 for (int i = 0; i < vocPos.length; i++) {
                     if (pos < vocPos[i]) {
                         pos = vocPos[i];

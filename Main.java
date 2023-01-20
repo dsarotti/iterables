@@ -11,7 +11,7 @@ public class Main {
         }
         System.out.println("------------------------------------");
         System.out.println("Fin de la 1º parte.");
-        
+
         // La salida por consola debería ser:
         // caracter: a
         // caracter: b
@@ -31,7 +31,7 @@ public class Main {
         }
         System.out.println("------------------------------------");
         System.out.println("Fin de la 2º parte.");
-        
+
         // La salida por consola debería ser:
         // vocal: a
         // vocal: e
