@@ -2,9 +2,6 @@ import java.util.NoSuchElementException;
 
 public class Vocal extends Abecedario {
 
-    public Vocal() {
-    }
-
     @Override
     public VocalIterator iterator(){
         return new VocalIterator();       
